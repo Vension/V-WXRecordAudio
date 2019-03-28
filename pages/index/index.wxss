@@ -2,14 +2,37 @@
 
 .voice-style {
   position: relative;
+  top: 300rpx;
+  z-index: 1111;
   height: 240rpx;
   width: 240rpx;
-  margin: 200rpx auto;
+  margin: auto;
+  border-radius: 50%;
+  background: #ff9100;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  background: #ff9100;
+  vertical-align: middle;
+}
+
+.voice-style.show {
+  z-index: 9999;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+  animation-name: scale-up;
+}
+
+@keyframes scale-up {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .sound-style {
@@ -25,6 +48,7 @@
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
+
 /** 音频跳动动画 */
 
 .equilizer {

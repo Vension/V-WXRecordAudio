@@ -34,10 +34,10 @@ Page({
     recorderManager.start(options);
     recorderManager.onStart(() => {
       console.log('recorder start')
-      speaking.call(_this);
       _this.setData({
         isSpeaking: true
       })
+      speaking.call(_this);
     });
     //错误回调
     recorderManager.onError((res) => {

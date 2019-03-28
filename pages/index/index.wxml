@@ -1,7 +1,6 @@
 <!--index.wxml-->
 
-
-<view class="voice-style" wx:if="{{isSpeaking}}">
+<view class="voice-style {{isSpeaking ? 'show' : ''}}" wx:if="{{isSpeaking}}">
   <image wx:if="{{j==1}}" class="sound-style" src="/images/voice_icon_speech_sound_1.png"></image>
   <image wx:if="{{j==2}}" class="sound-style" src="/images/voice_icon_speech_sound_2.png"></image>
   <image wx:if="{{j==3}}" class="sound-style" src="/images/voice_icon_speech_sound_3.png"></image>
